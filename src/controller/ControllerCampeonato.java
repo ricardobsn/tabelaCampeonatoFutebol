@@ -12,8 +12,6 @@ public class ControllerCampeonato {
     private List<Time> timesCampeonato;
     private List<Time> tabelaCampeonato;
 
-    public ControllerCampeonato(){
-    }
 
     public ControllerCampeonato(List timesCampeonato){
 
@@ -108,12 +106,14 @@ public class ControllerCampeonato {
 
     private void printTabelaCampeonato() {
 
-        System.out.println("\n---------- TABELA ----------\n");
+        System.out.println("\n-------------------- TABELA --------------------\n");
+        System.out.println("NOME : PONTOS\n");
         Collections.sort (tabelaCampeonato, new ComparadorDeTimes());
 
         for(int i= tabelaCampeonato.size()-1; i >= 0; i--){
             System.out.println(tabelaCampeonato.get(i).getNome() + " : " + tabelaCampeonato.get(i).getPontoCampeonato());
          }
+        System.out.println("\n--------------------------------------------------");
         System.out.println("\n" + tabelaCampeonato.get(tabelaCampeonato.size()-1).getNome() + " " + "CAMPEÃO!!!!");
 
     }
