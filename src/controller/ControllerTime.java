@@ -1,7 +1,6 @@
 package controller;
 
 import model.Time;
-
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
@@ -40,28 +39,25 @@ public class ControllerTime {
         chamarTabela(timesCampeonato);
     }
 
-    /*Verifica se é uma linha que possui o nome do aluno*/
+    /*Verifica se é uma linha que possui nome de time*/
     public  boolean isLinhaDeTime(String linha){
 
         return ( linha.contains(";"));
     }
 
     /*Cria a lista de times do campeonato*/
-    public List criaListaDeTimes(String linha) {
+    public void criaListaDeTimes(String linha) {
 
         String [] palavras = linha.split("\\s+");
         String nomeDoTime = palavras[0];
         String sedeTime = palavras[palavras.length-1];
         time = new Time(nomeDoTime,sedeTime);
         timesCampeonato.add(time);
-        ControllerCampeonato cc = new ControllerCampeonato(timesCampeonato);
-        //System.out.println(time.getNome() + time.getLocalSede());
-        return timesCampeonato;
     }
 
     public void chamarTabela(List timesCampeonato){
-        ControllerCampeonato cc = new ControllerCampeonato(timesCampeonato);
-        cc.gerarTabela();
+        ControllerCampeonato controllerCampeonato = new ControllerCampeonato(timesCampeonato);
+        controllerCampeonato.gerarTabela();
 
     }
 }

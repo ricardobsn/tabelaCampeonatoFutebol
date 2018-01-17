@@ -21,57 +21,55 @@ public class ControllerCampeonato {
         this.tabelaCampeonato = new ArrayList<>(timesCampeonato);
     }
 
-
     public void gerarTabela(){
 
         String resultadoPartida;
         int t = timesCampeonato.size();
         int m = timesCampeonato.size() / 2;
 
-        System.out.println("PRIMEIRO TURNO");
+        System.out.println("PRIMEIRO TURNO\n");
 
         for (int i = 0; i < t - 1; i++) {
 
-            System.out.print((i + 1) + "a rodada: ");
+            System.out.print((i + 1) + "a rodada: \n ");
+            for (int j = 0; j < m; j++) {
+                //Teste para ajustar o mando de campo
+                if (j % 2 == 1 || i % 2 == 1 && j == 0){
+                    resultadoPartida = timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1);
+                    this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
+                    System.out.print(timesCampeonato.get(t - j - 1) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(j) + " " + "-" + " " + timesCampeonato.get(t - j - 1).getLocalSede() + "\n");
+                }
+                else
+                    resultadoPartida = timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1);
+                this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
+                System.out.print(timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1) + " " + "-" + " " + timesCampeonato.get(j).getLocalSede() + "\n");
+            }
+            System.out.println();
+            //Gira os clubes no sentido horário, mantendo o primeiro no lugar
+            timesCampeonato.add(1, timesCampeonato.remove(timesCampeonato.size()-1));
+        }
+        System.out.println("\nSEGUNDO TURNO\n");
+        for (int i = 0; i < t - 1; i++) {
+            System.out.print((i + 1) + "a rodada: \n");
             for (int j = 0; j < m; j++) {
 
                 //Teste para ajustar o mando de campo
                 if (j % 2 == 1 || i % 2 == 1 && j == 0){
                     resultadoPartida = timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1);
                     this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
-                    System.out.print(timesCampeonato.get(t - j - 1) + " " + this.golsPartida() + " x " + this.golsPartida() + " " + timesCampeonato.get(j) + "   ");
+                    System.out.print(timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1) + " " + "-" + " " + timesCampeonato.get(j).getLocalSede() + "\n");
                 }
                 else
                     resultadoPartida = timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1);
                 this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
-                System.out.print(timesCampeonato.get(j) + " " + this.golsPartida() + " x " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1) + "   ");
-            }
-            System.out.println();
-            //Gira os clubes no sentido horário, mantendo o primeiro no lugar
-            timesCampeonato.add(1, timesCampeonato.remove(timesCampeonato.size()-1));
-        }
-        System.out.println("SEGUNDO TURNO");
-        for (int i = 0; i < t - 1; i++) {
-            System.out.print((i + 1) + "a rodada: ");
-            for (int j = 0; j < m; j++) {
-
-                //Teste para ajustar o mando de campo
-                if (j % 2 == 1 || i % 2 == 1 && j == 0){
-                    resultadoPartida = timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1);
-                    this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
-                    System.out.print(timesCampeonato.get(j) + " " + this.golsPartida() + " x " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1) + "   ");
-                }
-                else
-                    resultadoPartida = timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1);
-                this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
-                System.out.print(timesCampeonato.get(t - j - 1) + " " + this.golsPartida() + " x " + this.golsPartida() + " " + timesCampeonato.get(j) + "   ");
+                System.out.print(timesCampeonato.get(t - j - 1) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(j) + " " + "-" + " " + timesCampeonato.get(t - j - 1).getLocalSede() + "\n");
             }
             System.out.println();
             //Gira os clubes no sentido horário, mantendo o primeiro no lugar
             timesCampeonato.add(1, timesCampeonato.remove(timesCampeonato.size()-1));
         }
 
-        printTabelaCampeonata();
+        printTabelaCampeonato();
     }
 
     public void pontuacaoPartida(String resultadoPartida, String timeCasa, String timeVisitante){
@@ -93,10 +91,6 @@ public class ControllerCampeonato {
         else
             this.pontuacaoCampeonato(timeDaCasa,1,timeDeFora ,1);
 
-
-
-/// System.out.println(golsTimeVisitante);
-
     }
 
     public void pontuacaoCampeonato(String nomeTimeCasa, int pontoMandante, String nomeTimeVisitante, int pontoVisita){
@@ -107,22 +101,20 @@ public class ControllerCampeonato {
         Time timeCasa = tabelaCampeonato.get(posicaoTimecasa);
         timeCasa.setPontoCampeonato(timeCasa.getPontoCampeonato() + pontoMandante);
 
-
         Time timeVisitante = tabelaCampeonato.get(posicaoVisitante);
         timeVisitante.setPontoCampeonato(timeVisitante.getPontoCampeonato() + pontoVisita);
 
-
-
     }
 
-    private void printTabelaCampeonata() {
+    private void printTabelaCampeonato() {
 
+        System.out.println("\n---------- TABELA ----------\n");
         Collections.sort (tabelaCampeonato, new ComparadorDeTimes());
 
         for(int i= tabelaCampeonato.size()-1; i >= 0; i--){
             System.out.println(tabelaCampeonato.get(i).getNome() + " : " + tabelaCampeonato.get(i).getPontoCampeonato());
          }
-        System.out.println(tabelaCampeonato.get(tabelaCampeonato.size()-1).getNome() +" "+"CAMPEÃO!!!!");
+        System.out.println("\n" + tabelaCampeonato.get(tabelaCampeonato.size()-1).getNome() + " " + "CAMPEÃO!!!!");
 
     }
 
