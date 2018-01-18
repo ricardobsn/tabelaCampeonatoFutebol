@@ -2,16 +2,18 @@ package controller;
 
 import model.Time;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class ControllerCampeonato {
 
     private List<Time> timesCampeonato;
     private List<Time> tabelaCampeonato;
+    private List<String> locaisPartidasDoTurno = new ArrayList<String>();
 
+
+    public ControllerCampeonato(){
+
+    }
 
     public ControllerCampeonato(List timesCampeonato){
 
@@ -28,7 +30,6 @@ public class ControllerCampeonato {
         System.out.println("PRIMEIRO TURNO\n");
 
         for (int i = 0; i < t - 1; i++) {
-
             System.out.print((i + 1) + "a rodada: \n ");
             for (int j = 0; j < m; j++) {
                 //Teste para ajustar o mando de campo
@@ -36,12 +37,17 @@ public class ControllerCampeonato {
                     resultadoPartida = timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1);
                     this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
                     System.out.print(timesCampeonato.get(t - j - 1) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(j) + " " + "-" + " " + timesCampeonato.get(t - j - 1).getLocalSede() + "\n");
+                    locaisPartidasDoTurno.add(timesCampeonato.get(t - j - 1).getLocalSede());
+                   // locaisDaPartidaDoTurno(timesCampeonato.get(t - j - 1).getLocalSede());
                 }
                 else
                     resultadoPartida = timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1);
-                this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
-                System.out.print(timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1) + " " + "-" + " " + timesCampeonato.get(j).getLocalSede() + "\n");
+                    this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
+                    System.out.print(timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1) + " " + "-" + " " + timesCampeonato.get(j).getLocalSede() + "\n");
+                    locaisPartidasDoTurno.add(timesCampeonato.get(j).getLocalSede());
             }
+
+            this.parseDosLocaisDasPartidasEmTurnos(locaisPartidasDoTurno);
             System.out.println();
             //Gira os clubes no sentido horário, mantendo o primeiro no lugar
             timesCampeonato.add(1, timesCampeonato.remove(timesCampeonato.size()-1));
@@ -59,9 +65,11 @@ public class ControllerCampeonato {
                 }
                 else
                     resultadoPartida = timesCampeonato.get(j) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(t - j - 1);
-                this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
-                System.out.print(timesCampeonato.get(t - j - 1) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(j) + " " + "-" + " " + timesCampeonato.get(t - j - 1).getLocalSede() + "\n");
+                    this.pontuacaoPartida(resultadoPartida, String.valueOf(timesCampeonato.get(j)),String.valueOf(timesCampeonato.get(t - j - 1)));
+                    System.out.print(timesCampeonato.get(t - j - 1) + " " + this.golsPartida() + " vs " + this.golsPartida() + " " + timesCampeonato.get(j) + " " + "-" + " " + timesCampeonato.get(t - j - 1).getLocalSede() + "\n");
+
             }
+            this.parseDosLocaisDasPartidasEmTurnos(locaisPartidasDoTurno);
             System.out.println();
             //Gira os clubes no sentido horário, mantendo o primeiro no lugar
             timesCampeonato.add(1, timesCampeonato.remove(timesCampeonato.size()-1));
@@ -108,7 +116,7 @@ public class ControllerCampeonato {
 
         System.out.println("\n-------------------- TABELA --------------------\n");
         System.out.println("NOME : PONTOS\n");
-        Collections.sort (tabelaCampeonato, new ComparadorDeTimes());
+        Collections.sort (tabelaCampeonato, new ControllerComparadorDeTimes());
 
         for(int i= tabelaCampeonato.size()-1; i >= 0; i--){
             System.out.println(tabelaCampeonato.get(i).getNome() + " : " + tabelaCampeonato.get(i).getPontoCampeonato());
@@ -132,6 +140,25 @@ public class ControllerCampeonato {
         int valor = new Random().nextInt(4);
         String gols = String.valueOf(valor);
         return gols;
+    }
+
+
+    public List parseDosLocaisDasPartidasEmTurnos(List locaisPartidasDoTurno ){
+
+        int contJogoRJ = 0;
+        int contJogoSP = 0;
+        List<String> turno = locaisPartidasDoTurno.subList(locaisPartidasDoTurno.size()-4, locaisPartidasDoTurno.size()-1);
+        for (int j = 0; j < turno.size(); j ++){
+            if (turno.get(j).equals("RJ")){
+                contJogoRJ++;
+            }
+            else if (turno.get(j).equals("SP")){
+                contJogoSP++;
+            }
+        }
+        if ((contJogoRJ > 1)||(contJogoSP > 1))
+        System.out.println("RODADA DUPLA");
+        return turno;
     }
 
 }

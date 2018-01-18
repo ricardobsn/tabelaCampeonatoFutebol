@@ -4,7 +4,7 @@ import model.Time;
 
 import java.util.Comparator;
 
-class ComparadorDeTimes implements Comparator<Time> {
+class ControllerComparadorDeTimes implements Comparator<Time> {
 
     public int compare(Time time1, Time time2) {
         if (time1.getPontoCampeonato() < time2.getPontoCampeonato()) return -1;
