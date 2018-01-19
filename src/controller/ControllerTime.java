@@ -17,6 +17,7 @@ public class ControllerTime {
     }
 
     public void leituraTimes(){
+
         URL url = getClass().getResource("times.txt");
         File file = new File(url.getPath());
         BufferedReader br = null;
@@ -26,11 +27,11 @@ public class ControllerTime {
             e.printStackTrace();
         }
 
-        String st;
+        String linha;
         try {
-            while ((st = br.readLine()) != null)
-               if (isLinhaDeTime(st)){
-                this.criaListaDeTimes(st);
+            while ((linha = br.readLine()) != null)
+               if (isLinhaDeTime(linha)){
+                this.criaListaDeTimes(linha);
             }
 
         } catch (IOException e) {
@@ -56,6 +57,7 @@ public class ControllerTime {
     }
 
     public void chamarTabela(List timesCampeonato){
+
         ControllerCampeonato controllerCampeonato = new ControllerCampeonato(timesCampeonato);
         controllerCampeonato.gerarTabela();
 

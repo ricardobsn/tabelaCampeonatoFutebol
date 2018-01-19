@@ -2,27 +2,41 @@ package tests;
 
 import controller.ControllerCampeonato;
 import org.junit.Test;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertTrue;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ControllerCampeonatoTest {
 
     ControllerCampeonato controllerCampeonato = new ControllerCampeonato();
 
+    @Test
+    public void golsPartidaTest( ){
 
-//    @Test
-//    public void pontuacaoPartidaTest( ){
-//
-//        String resultadoPartida = "Vasco 3 vs 1 Flamengo";
-//        String timeCasa = "Vasco";
-//        String timeVisitante = "Flamengo";
-//
-//        HashMap materias = new HashMap<String,String>();
-//        materias.put("0001", "Aprovado");
-//        materias.put("0002", "por");
-//        ControllerFluxograma.Status result = controleFluxograma.verificaSeAMateriaFoiCursada(materia, materias);
-//
-//        assertEquals(ControllerFluxograma.Status.APROVADO, result );
-//    }
+        String golsPartida = controllerCampeonato.golsPartida();
+        int gols = Integer.valueOf(golsPartida);
+        assertTrue(gols < 4);
+    }
+
+    @Test
+    public void parseDosLocaisDasPartidasEmTurnosTest( ){
+
+        List<String> jogosTurno = new ArrayList<>();
+        jogosTurno.add("RJ");
+        jogosTurno.add("SP");
+        jogosTurno.add("MG");
+        jogosTurno.add("SP");
+        jogosTurno.add("RS");
+        jogosTurno.add("RJ");
+        System.out.println(jogosTurno);
+        List<String> jogosRodada;
+        jogosRodada = controllerCampeonato.parseDosLocaisDasPartidasEmTurnosEVerificaSeTemRodadaDupla(jogosTurno);
+        assertThat(jogosRodada.size(), is(3));
+
+    }
 
 }

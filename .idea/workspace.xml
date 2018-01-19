@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad6787d5-cc3d-47a1-99ea-b8066872a394" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tests/ControllerCampeonatoTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/controller/ComparadorDeTimes.java" afterPath="$PROJECT_DIR$/src/controller/ControllerComparadorDeTimes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tabela/controller/ControllerCampeonato.class" afterPath="$PROJECT_DIR$/out/production/tabela/controller/ControllerCampeonato.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tabela/tests/ControllerCampeonatoTest.class" afterPath="$PROJECT_DIR$/out/production/tabela/tests/ControllerCampeonatoTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/ControllerCampeonato.java" afterPath="$PROJECT_DIR$/src/controller/ControllerCampeonato.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tabela.iml" afterPath="$PROJECT_DIR$/tabela.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/ControllerTime.java" afterPath="$PROJECT_DIR$/src/controller/ControllerTime.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/ControllerCampeonatoTest.java" afterPath="$PROJECT_DIR$/src/tests/ControllerCampeonatoTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +22,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="108">
+              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -31,11 +32,10 @@
       <file leaf-file-name="ControllerCampeonato.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/ControllerCampeonato.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1278">
-              <caret line="71" column="74" lean-forward="false" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
+            <state relative-caret-position="2880">
+              <caret line="160" column="5" lean-forward="false" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#242#250#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,8 +44,8 @@
       <file leaf-file-name="ControllerTime.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/ControllerTime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="19" />
+            <state relative-caret-position="378">
+              <caret line="60" column="7" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,11 +98,11 @@
         <option value="$PROJECT_DIR$/src/controller/main.java" />
         <option value="$PROJECT_DIR$/src/controller/times.txt" />
         <option value="$PROJECT_DIR$/src/controller/Main.java" />
-        <option value="$PROJECT_DIR$/src/controller/ControllerTime.java" />
         <option value="$PROJECT_DIR$/src/model/Time.java" />
         <option value="$PROJECT_DIR$/src/controller/ComparadorDeTimes.java" />
-        <option value="$PROJECT_DIR$/src/tests/ControllerCampeonatoTest.java" />
         <option value="$PROJECT_DIR$/src/controller/ControllerCampeonato.java" />
+        <option value="$PROJECT_DIR$/src/tests/ControllerCampeonatoTest.java" />
+        <option value="$PROJECT_DIR$/src/controller/ControllerTime.java" />
       </list>
     </option>
   </component>
@@ -188,6 +188,106 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="ControllerCampeonatoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tabela" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ControllerCampeonatoTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ControllerCampeonatoTest.getTimeNaTabelaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tabela" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ControllerCampeonatoTest" />
+      <option name="METHOD_NAME" value="getTimeNaTabelaTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ControllerCampeonatoTest.golsPartidaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tabela" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ControllerCampeonatoTest" />
+      <option name="METHOD_NAME" value="golsPartidaTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ControllerCampeonatoTest.parseDosLocaisDasPartidasEmTurnosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tabela" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ControllerCampeonatoTest" />
+      <option name="METHOD_NAME" value="parseDosLocaisDasPartidasEmTurnosTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -288,9 +388,20 @@
       <properties />
       <listeners />
     </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ControllerCampeonatoTest.getTimeNaTabelaTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ControllerCampeonatoTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ControllerCampeonatoTest.golsPartidaTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ControllerCampeonatoTest.parseDosLocaisDasPartidasEmTurnosTest" />
+    </list>
     <recent_temporary>
-      <list size="1">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ControllerCampeonatoTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ControllerCampeonatoTest.parseDosLocaisDasPartidasEmTurnosTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ControllerCampeonatoTest.golsPartidaTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ControllerCampeonatoTest.getTimeNaTabelaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -306,6 +417,38 @@
       <updated>1516031993518</updated>
     </task>
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ControllerCampeonatoTest - 2018.01.19 at 10h 27m 16s.xml">
+      <configuration name="ControllerCampeonatoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerCampeonatoTest - 2018.01.19 at 11h 14m 51s.xml">
+      <configuration name="ControllerCampeonatoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerCampeonatoTest - 2018.01.19 at 11h 21m 46s.xml">
+      <configuration name="ControllerCampeonatoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerCampeonatoTest_getTimeNaTabelaTest - 2018.01.19 at 10h 29m 05s.xml">
+      <configuration name="ControllerCampeonatoTest.getTimeNaTabelaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerCampeonatoTest_getTimeNaTabelaTest - 2018.01.19 at 10h 34m 19s.xml">
+      <configuration name="ControllerCampeonatoTest.getTimeNaTabelaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerCampeonatoTest_golsPartidaTest - 2018.01.19 at 11h 05m 08s.xml">
+      <configuration name="ControllerCampeonatoTest.golsPartidaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerCampeonatoTest_golsPartidaTest - 2018.01.19 at 11h 05m 23s.xml">
+      <configuration name="ControllerCampeonatoTest.golsPartidaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerCampeonatoTest_golsPartidaTest - 2018.01.19 at 11h 05m 32s.xml">
+      <configuration name="ControllerCampeonatoTest.golsPartidaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerCampeonatoTest_parseDosLocaisDasPartidasEmTurnosTest - 2018.01.19 at 11h 10m 16s.xml">
+      <configuration name="ControllerCampeonatoTest.parseDosLocaisDasPartidasEmTurnosTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerCampeonatoTest_parseDosLocaisDasPartidasEmTurnosTest - 2018.01.19 at 11h 14m 42s.xml">
+      <configuration name="ControllerCampeonatoTest.parseDosLocaisDasPartidasEmTurnosTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1215" height="1028" extended-state="6" />
@@ -391,7 +534,6 @@
           <caret line="124" column="27" lean-forward="false" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#242#250#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -434,6 +576,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/times.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/ControllerCampeonatoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Time.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -444,47 +604,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="108">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/ControllerTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="19" />
+        <state relative-caret-position="378">
+          <caret line="60" column="7" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/ControllerCampeonatoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/times.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/ControllerCampeonato.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1278">
-          <caret line="71" column="74" lean-forward="false" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
+        <state relative-caret-position="2880">
+          <caret line="160" column="5" lean-forward="false" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#242#250#0" expanded="true" />
           </folding>
         </state>
       </provider>
